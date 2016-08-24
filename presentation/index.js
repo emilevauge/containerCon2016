@@ -37,11 +37,6 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-    city: require("../assets/city.jpg"),
-    kat: require("../assets/kat.png"),
-    logo: require("../assets/formidable-logo.svg"),
-    markdown: require("../assets/markdown.png"),
-
     traefik: require("../assets/figures/traefik.logo.svg"),
     huh: require("../assets/figures/huh.gif"),
     microservices: require("../assets/figures/microservices.png"),
@@ -67,9 +62,8 @@ const images = {
     cisco: require("../assets/figures/cisco-logo.png"),
     zenika: require("../assets/figures/zenika.logo.png"),
     containous: require("../assets/figures/containous.logo.png"),
-    arrow: require("../assets/figures/arrow.png")
-    
-    
+    arrow: require("../assets/figures/arrow.png"),
+    traefikSticker: require("../assets/figures/traefik.sticker.png")
 };
 
 preloader(images);
@@ -84,6 +78,7 @@ export default class Presentation extends React.Component {
     return (
       <Spectacle theme={theme}>
         <Deck transition={["slide"]} transitionDuration={200}>
+
           <Slide bgColor="white">
             <Image src={images.traefik.replace("/", "")} margin="0px auto 20px" fit height="200" />
             <Heading size={1}  caps textColor="primary">
@@ -103,7 +98,7 @@ export default class Presentation extends React.Component {
               $ whoami
             </Heading>
             <List fit textColor="white">
-              <Appear><ListItem>French DevOps & Developer</ListItem></Appear>
+              <Appear><ListItem>French 🇫🇷 DevOps & Developer</ListItem></Appear>
               <Appear><ListItem>I ❤ Docker 🐳, I ❤ Go</ListItem></Appear>
               <Appear><ListItem>Worked @ Thales, Airbus, Lyra, Zenika</ListItem></Appear>
               <Appear><ListItem>Creator and maintainer of <Link href="https://traefik.io">traefik.io</Link></ListItem></Appear>
@@ -134,7 +129,6 @@ export default class Presentation extends React.Component {
               <Image src={images.docker.replace("/", "")} margin="40px auto 10px" height="150" />
               <Image src={images.rkt.replace("/", "")} margin="10px auto 10px" height="130" />
           </Slide>
-
 
           <Slide  bgColor="white">
             <Heading size={3} fit textColor="black" >
@@ -241,7 +235,7 @@ export default class Presentation extends React.Component {
 
           <Slide bgColor="white">
             <Heading size={1} caps textColor="primary" >
-              Traefik v1.0.2
+              Traefik v1.0
             </Heading>
             <Image src={images.reblochon.replace("/", "")} height="300"/>
             <Heading size={1} caps textColor="primary" >
@@ -269,10 +263,35 @@ export default class Presentation extends React.Component {
             <Image  fit src={images.cisco.replace("/", "")} height="200" padding="20"/>
           </Slide>
 
+          <Slide>
+            <Heading size={1} fit caps>
+              What's next?
+            </Heading>
+            <Heading size={2} fit caps>
+              Let's Encrypt HA
+            </Heading>
+            <Heading size={1} fit caps>
+              TCP support
+            </Heading>
+            <Heading size={2}>
+              ...
+            </Heading>
+          </Slide>
+
           <Slide bgColor="white">
-            <Image   src={images.zenika.replace("/", "")} height="200"/>
-            <Image   src={images.arrow.replace("/", "")} height="200" />
-            <Image   src={images.containous.replace("/", "")} height="200" />
+            <Image src={images.zenika.replace("/", "")} width="800"/>
+            <Image src={images.arrow.replace("/", "")} height="120" />
+            <Image src={images.containous.replace("/", "")} width="800" />
+          </Slide>
+
+          <Slide bgColor="white">
+            <Heading size={1} caps textColor="primary" textSize="170">
+              I have
+            </Heading>
+            <Image src={images.traefik.replace("/", "")} height="200"/>
+            <Heading size={1} caps textColor="primary">
+              Stickers!
+            </Heading>
           </Slide>
 
           <Slide bgColor="black">
