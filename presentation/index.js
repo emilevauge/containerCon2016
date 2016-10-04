@@ -63,7 +63,8 @@ const images = {
     zenika: require("../assets/figures/zenika.logo.png"),
     containous: require("../assets/figures/containous.logo.png"),
     arrow: require("../assets/figures/arrow.png"),
-    traefikSticker: require("../assets/figures/traefik.sticker.png")
+    traefikSticker: require("../assets/figures/traefik.sticker.png"),
+    camembert: require("../assets/figures/camembert.png")
 };
 
 preloader(images);
@@ -99,7 +100,7 @@ export default class Presentation extends React.Component {
             </Heading>
             <List fit textColor="white">
               <Appear><ListItem>French 🇫🇷 DevOps & Developer</ListItem></Appear>
-              <Appear><ListItem>I ❤ Docker 🐳, I ❤ Go</ListItem></Appear>
+              <Appear><ListItem>I ❤ Docker 🐳, I ❤ Go and 🐧</ListItem></Appear>
               <Appear><ListItem>Worked @ Thales, Airbus, Lyra, Zenika</ListItem></Appear>
               <Appear><ListItem>Creator and maintainer of <Link href="https://traefik.io">traefik.io</Link></ListItem></Appear>
             </List>
@@ -245,13 +246,40 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading size={1} fit caps>
-              4342 ★
+              4600+ ★
             </Heading>
-            <Heading size={1} fit caps textColor="black">
-              291 PR closed
+            <Heading size={2} fit caps>
+              800k+ downloads
             </Heading>
-            <Heading size={1} fit caps>
-              53 contributors
+            <Heading size={1} fit caps >
+              328 LGTM, 66 👷
+            </Heading>
+          </Slide>
+
+          <Slide bgColor="white">
+            <Heading size={3} fit>
+              What's next?
+            </Heading>
+            <Heading size={1} fit caps textColor="primary">
+              Cluster mode,
+              Swarm mode
+            </Heading>
+            <Heading size={2} fit caps>
+              Generic Mesos,
+              Basic Auth
+            </Heading>
+            <Heading size={1} fit caps textColor="primary">
+              Session affinity
+            </Heading>
+          </Slide>
+
+          <Slide>
+            <Heading size={1} caps  >
+              Traefik v1.1 RC1
+            </Heading>
+            <Image src={images.camembert.replace("/", "")} height="300"/>
+            <Heading size={1} caps  >
+            camembert
             </Heading>
           </Slide>
 
@@ -261,21 +289,6 @@ export default class Presentation extends React.Component {
             </Heading>
             <Image  fit src={images.mantl.replace("/", "")} height="200" padding="20"/>
             <Image  fit src={images.cisco.replace("/", "")} height="200" padding="20"/>
-          </Slide>
-
-          <Slide>
-            <Heading size={1} fit caps>
-              What's next?
-            </Heading>
-            <Heading size={2} fit caps>
-              Let's Encrypt HA
-            </Heading>
-            <Heading size={1} fit caps>
-              TCP support
-            </Heading>
-            <Heading size={2}>
-              ...
-            </Heading>
           </Slide>
 
           <Slide bgColor="white">
